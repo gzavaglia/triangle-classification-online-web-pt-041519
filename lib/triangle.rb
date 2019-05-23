@@ -6,6 +6,19 @@ class Triangle
     @sideA = sideA
     @sideB = sideB
     @sideC = sideC
+    if @sideA <= 0 || @sideB <= 0 || @sideC <= 0
+      begin
+        raise TriangleError
+      rescue TriangleError => error
+          puts error.message1
+      end
+    elsif @sideA+@sideB < @sideC || @sideA+@sideC < @sideB || @sideC+@sideB < @sideA
+        begin
+          raise TriangleError
+        rescue TriangleError => error
+            puts error.message2
+        end
+      end
   end
   
   def kind 
@@ -15,18 +28,18 @@ class Triangle
       return :isosceles
     elsif @sideA != @sideB && @sideA != @sideC && @sideB != @sideC
       return :scalene
-    elsif @sideA <= 0 || @sideB <= 0 || @sideC <= 0
-      begin
-        raise TriangleError
-      rescue TriangleError => error
-          puts error.message1
-      end
-      elsif @sideA+@sideB < @sideC || @sideA+@sideC < @sideB || @sideC+@sideB < @sideA
-        begin
-          raise TriangleError
-        rescue TriangleError => error
-            puts error.message2
-        end
+    # elsif @sideA <= 0 || @sideB <= 0 || @sideC <= 0
+    #   begin
+    #     raise TriangleError
+    #   rescue TriangleError => error
+    #       puts error.message1
+    #   end
+    #   elsif @sideA+@sideB < @sideC || @sideA+@sideC < @sideB || @sideC+@sideB < @sideA
+    #     begin
+    #       raise TriangleError
+    #     rescue TriangleError => error
+    #         puts error.message2
+    #     end
     end
   end
   
