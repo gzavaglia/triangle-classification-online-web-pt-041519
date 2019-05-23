@@ -10,13 +10,13 @@ class Triangle
       begin
         raise TriangleError
       rescue TriangleError => error
-          puts error.message1
+          error.message1
       end
     elsif sideA+sideB < sideC || sideA+sideC < sideB || sideC+sideB < sideA
         begin
           raise TriangleError
         rescue TriangleError => error
-            puts error.message2
+            error.message2
         end
       else 
           @sideA = sideA
