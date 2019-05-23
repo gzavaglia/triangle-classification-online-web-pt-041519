@@ -7,6 +7,14 @@ class Triangle
     @sideC = sideC
   end
   
+  def kind 
+    if @sideA == @sideB == @sideC
+      return :equilateral
+    end
+  end
+  
+  
+  
   class TriangleError < StandardError
     
   end
