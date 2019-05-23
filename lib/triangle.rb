@@ -13,7 +13,8 @@ class Triangle
       return :equilateral
     elsif @sideA == @sideB || @sideA ==@sideC || @sideB == @sideC
       return :isosceles
-      
+    elsif @sideA != @sideB && @sideA != @sideC && @sideB != @sideC
+      return :scalene
     end
   end
   
