@@ -53,7 +53,7 @@ class Triangle
     def message2
       "Triangle Inequality"
     end
-    return true
+    
   end
   
 end
