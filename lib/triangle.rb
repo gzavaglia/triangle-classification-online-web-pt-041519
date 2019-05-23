@@ -6,13 +6,13 @@ class Triangle
     @sideA = sideA
     @sideB = sideB
     @sideC = sideC
-    if @sideA <= 0 || @sideB <= 0 || @sideC <= 0
+    if sideA <= 0 || sideB <= 0 || sideC <= 0
       begin
         raise TriangleError
       rescue TriangleError => error
           puts error.message1
       end
-    elsif @sideA+@sideB < @sideC || @sideA+@sideC < @sideB || @sideC+@sideB < @sideA
+    elsif sideA+sideB < sideC || sideA+sideC < sideB || sideC+sideB < sideA
         begin
           raise TriangleError
         rescue TriangleError => error
