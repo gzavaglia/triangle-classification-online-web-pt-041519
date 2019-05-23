@@ -7,17 +7,10 @@ class Triangle
     # @sideB = sideB
     # @sideC = sideC
     if sideA <= 0 || sideB <= 0 || sideC <= 0
-      begin
         raise TriangleError
-      rescue TriangleError => error
-          error.message1
       end
     elsif sideA+sideB < sideC || sideA+sideC < sideB || sideC+sideB < sideA
-        begin
           raise TriangleError
-        rescue TriangleError => error
-            error.message2
-        end
       else 
           @sideA = sideA
           @sideB = sideB
@@ -50,13 +43,13 @@ class Triangle
   
   
   class TriangleError < StandardError
-    def message1
-      "Sides must be larger than 0"
-    end
+    # def message1
+    #   "Sides must be larger than 0"
+    # end
     
-    def message2
-      "Triangle Inequality"
-    end
+    # def message2
+    #   "Triangle Inequality"
+    # end
     
   end
   
