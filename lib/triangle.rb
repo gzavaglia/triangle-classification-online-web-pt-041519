@@ -8,7 +8,7 @@ class Triangle
     # @sideC = sideC
     if sideA <= 0 || sideB <= 0 || sideC <= 0
         raise TriangleError
-    elsif sideA+sideB < sideC || sideA+sideC < sideB || sideC+sideB < sideA
+    elsif sideA+sideB <= sideC || sideA+sideC <= sideB || sideC+sideB <= sideA
           raise TriangleError
       else 
           @sideA = sideA
