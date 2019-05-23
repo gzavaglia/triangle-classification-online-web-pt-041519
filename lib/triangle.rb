@@ -15,6 +15,12 @@ class Triangle
       return :isosceles
     elsif @sideA != @sideB && @sideA != @sideC && @sideB != @sideC
       return :scalene
+    else 
+      begin
+        raise TriangleError
+      rescue TriangleError => error
+          puts error.message
+      end
     end
   end
   
