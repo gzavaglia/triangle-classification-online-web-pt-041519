@@ -9,7 +9,7 @@ class Triangle
   end
   
   def kind 
-    if @sideA == @sideB == @sideC
+    if @sideA == @sideB && sideB == @sideC
       return :equilateral
     end
   end
