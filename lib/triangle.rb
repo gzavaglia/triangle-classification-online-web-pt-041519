@@ -18,6 +18,10 @@ class Triangle
         rescue TriangleError => error
             puts error.message2
         end
+      else 
+         @sideA = sideA
+      @sideB = sideB
+      @sideC = sideC
       end
   end
   
