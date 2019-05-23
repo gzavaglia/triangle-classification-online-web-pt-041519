@@ -3,9 +3,9 @@ class Triangle
   attr_accessor :sideA, :sideB, :sideC
   
   def initialize(sideA, sideB, sideC)
-    @sideA = sideA
-    @sideB = sideB
-    @sideC = sideC
+    # @sideA = sideA
+    # @sideB = sideB
+    # @sideC = sideC
     if sideA <= 0 || sideB <= 0 || sideC <= 0
       begin
         raise TriangleError
@@ -19,9 +19,9 @@ class Triangle
             puts error.message2
         end
       else 
-         @sideA = sideA
-      @sideB = sideB
-      @sideC = sideC
+          @sideA = sideA
+          @sideB = sideB
+          @sideC = sideC
       end
   end
   
