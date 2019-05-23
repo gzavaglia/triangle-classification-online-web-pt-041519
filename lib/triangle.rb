@@ -19,8 +19,14 @@ class Triangle
       begin
         raise TriangleError
       rescue TriangleError => error
-          puts error.message
+          puts error.message1
       end
+      elsif @sideA+@sideB < @sideC || @sideA+@sideC < @sideB || @sideC+@sideB < @sideA
+        begin
+          raise TriangleError
+        rescue TriangleError => error
+            puts error.message2
+        end
     end
   end
   
@@ -31,7 +37,9 @@ class Triangle
       "Sides must be larger than 0"
     end
     
-    def 
+    def message2
+      "Triangle Inequality"
+    end
   end
   
 end
