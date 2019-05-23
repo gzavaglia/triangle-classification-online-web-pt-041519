@@ -1,3 +1,4 @@
+require_relative "../lib/triangle.rb"
 class Triangle
   attr_accessor :sideA, :sideB, :sideC
   
